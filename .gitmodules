@@ -1,0 +1,4 @@
+[submodule "marl-book-codebase"]
+	path = marl-book-codebase
+	url = https://github.com/marl-book/codebase
+	branch = model_update
