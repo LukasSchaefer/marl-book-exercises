@@ -21,9 +21,10 @@ python train_iql.py
 
 This will train the IQL agents in the "Prisoners' Dilemma" matrix game and periodically evaluate their performance. You will see regular evaluation results and once training terminates, you will see a plot of the learned Q-values for each agent!
 
+
 ## Multi-Agent Deep Reinforcement Learning via the MARL Textbook Codebase
 
-To accompany the MARL texdtbook, we have designed a [codebase](https://github.com/marl-book/codebase) that implements basic and easy-to-understand deep MARL ideas. The algorithms are self-contained and the implementations are focusing on simplicity.
+To accompany the MARL textbook, we have designed a [codebase](https://github.com/marl-book/codebase) that implements basic and easy-to-understand deep MARL ideas. The algorithms are self-contained and the implementations are focusing on simplicity.
 
 Note: Implementation tricks, while necessary for some algorithms, are sparse as not to make the code very complicated. As a result, some performance has been sacrificed.
 
