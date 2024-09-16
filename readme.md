@@ -27,7 +27,7 @@ This will train the IQL agents in the "Prisoners' Dilemma" matrix game and perio
 
 ## Wednesday: Actor-Critic Algorithms in Level-Based Foraging
 
-In the following exercises, we will make use of the textbook codebase. This [codebase](https://github.com/marl-book/codebase) has been designed to accompany the MARL textbook and implements basic and easy-to-understand deep MARL ideas. The algorithms are self-contained and the implementations are focusing on simplicity.
+In the following exercises, we will make use of the textbook codebase. This [codebase](https://github.com/marl-book/codebase) has been designed to accompany the MARL textbook and contains easy-to-understand implementations deep MARL algorithms. The algorithm implementations are self-contained and focus on simplicity.
 
 ### Multi-Agent Deep Reinforcement Learning via the MARL Textbook Codebase
 
