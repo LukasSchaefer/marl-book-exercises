@@ -3,7 +3,7 @@
 > [!NOTE]  
 > For these exercises, we will install Python packages and execute them with Python 3. We recommend using a virtual environment to avoid conflicts with other Python installations, e.g. using `venv` or `conda`. All exercises were tested with Python 3.10.
 
-## Day 1: Tabular Multi-Agent Reinforcement Learning
+## Tuesday: Tabular Multi-Agent Reinforcement Learning
 
 In this exercise, we will implement the MARL algorithm Independent Q-learning (IQL), in which each agent independently learns its Q-function using Q-learning updates. We will train agents in the matrix game of "Prisoners' Dilemma", regularly evaluate their performance, and visualise their learned value functions.
 
@@ -67,7 +67,7 @@ python run.py +algorithm=ia2c env.name="lbforaging:Foraging-8x8-3p-2f-v3" env.ti
 
 You should see regular progress of training being printed to the console. For more details on the codebase, please refer to the `README.md` file within the `marl-book-codebase` directory.
 
-## Day 2: Actor-Critic Algorithms in Level-Based Foraging
+## Wednesday: Actor-Critic Algorithms in Level-Based Foraging
 
 In this exercise, we will train some agents in a level-based foraging task using the independent advantage actor-critic (IA2C) algorithm. The IA2C algorithm is a multi-agent extension of the advantage actor-critic (A2C) algorithm, where each agent learns its policy and value function independently. 
 
@@ -141,7 +141,7 @@ python eval.py path=path/to/deep_marl_data/rware_tiny-4ag/... env.name="lbforagi
 with the path pointing to the run directory of the training run you want to evaluate. By default, this will load the last checkpoint of the training run and generate a video of the agents' rollouts. You can also specify the checkpoint to load by adding the `load_step` argument to the command with the respective timestep the checkpoint is from (you can check the `checkpoints` directory of a run to see all available checkpoints).
 
 
-## Day 3: Value Decomposition Algorithms
+## Thursday: Value Decomposition Algorithms
 
 In this exercise, we will take a look at independent DQN (IDQN) and value decomposition algorithms such as value decomposition networks (VDN) and QMIX. These algorithms extend IDQN for common-reward multi-agent tasks and decompose the joint action-value function into individual utility functions for each agent. We will look at results of these algorithms in a level-based foraging task and a task of the SMAClite environment (more on this later).
 
