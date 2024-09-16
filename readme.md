@@ -5,7 +5,7 @@
 
 ## Tuesday: Tabular Multi-Agent Reinforcement Learning
 
-In this exercise, we will implement the MARL algorithm Independent Q-learning (IQL), in which each agent independently learns its Q-function using Q-learning updates. We will train agents in the matrix game of "Prisoners' Dilemma", regularly evaluate their performance, and visualise their learned value functions.
+In this exercise, we will implement the MARL algorithm independent Q-learning (IQL), in which each agent independently learns its Q-function using Q-learning updates. We will train agents in the matrix game of "Prisoners' Dilemma", regularly evaluate their performance, and visualise their learned value functions.
 
 > [!NOTE]  
 > We will run the "Prisoners' Dilemma" matrix game as a non-repeated game, where agents play a single round of the game and receive rewards based on their actions. This also makes the game stateless. In the implementation of the matrix game (see `matrix_game.py`), the state/ observation given to agents is always a 0-constant.
