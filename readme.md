@@ -140,6 +140,9 @@ python eval.py path=path/to/deep_marl_data/rware_tiny-4ag/... env.name="lbforagi
 ```
 with the path pointing to the run directory of the training run you want to evaluate. By default, this will load the last checkpoint of the training run and generate a video of the agents' rollouts. You can also specify the checkpoint to load by adding the `load_step` argument to the command with the respective timestep the checkpoint is from (you can check the `checkpoints` directory of a run to see all available checkpoints).
 
+> [!NOTE]
+> We note that only minimal hyperparameter tuning was performed for all of the training runs in the `deep_marl_data` directory so the performance and relative ranking of algorithms might not be reflective of their capabilities under tuned hyperparameters!
+
 
 ## Thursday: Value Decomposition Algorithms
 
