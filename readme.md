@@ -40,7 +40,7 @@ Make sure you clone the marl-book codebase within this repository as a submodule
 git submodule update --init --recursive
 ```
 
-After, you should find the `marl-book-codebase` directory within this directory. Navigate within the `marl-book-codebase` directory and install the required dependencies and codebase by running the following command:
+After, you should find the `marl-book-codebase` directory within this directory. Navigate to the `marl-book-codebase` directory and install the required dependencies and codebase by running the following command:
 
 ```bash
 cd marl-book-codebase
