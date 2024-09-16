@@ -61,7 +61,7 @@ To be able to train agents with the codebase, let's now install the [level-based
 pip install git+https://github.com/uoe-agents/lb-foraging.git
 ```
 
-Now we are ready to train some MARL agents with deep reinforcement learning algorithms! To test this, navigate within the `marlbase` directory and run the following command to train an independent A2C agent in a simple level-based foraging task:
+Now we are ready to train some MARL agents with deep reinforcement learning algorithms! To test this, navigate to the `marlbase` directory and run the following command to train an independent A2C agent in a simple level-based foraging task:
 
 ```bash
 python run.py +algorithm=ia2c env.name="lbforaging:Foraging-8x8-3p-2f-v3" env.time_limit=50 algorithm.total_steps=100000
@@ -157,7 +157,7 @@ python run.py +algorithm=idqn env.name="lbforaging:Foraging-8x8-2p-3f-v3" env.ti
 
 Similarly, we can train VDN and QMIX agents in the same task by substituting the `+algorithm` argument with `vdn` or `qmix`. In this case, we do not explicitly need to specify the `CooperativeReward` wrapper as the VDN and QMIX algorithm configurations already specify this setup.
 
-Since training all algorithms in this task would take notable time, we provide training data for IDQN, VDN, and QMIX agents in the `deep_marl_data/lbf_8x8-2p-3f_coop` directory. We suggest to compare the performance in episodic returns and other metrics of these algorithms, and to inspect the videos of their rollouts, or generate rollout videos by loading checkpoints and done before.
+Since training all algorithms in this task would take notable time, we provide training data for IDQN, VDN, and QMIX agents in the `deep_marl_data/lbf_8x8-2p-3f_coop` directory. We suggest to compare the performance in episodic returns and other metrics of these algorithms. To get a sense of the learned policies, you can view the provided videos of rollouts, or generate rollout videos by loading checkpoints and running the evaluation script as before.
 
 ### SMAClite with Value Decomposition Algorithms
 
