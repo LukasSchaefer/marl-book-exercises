@@ -25,9 +25,11 @@ python train_iql.py
 This will train the IQL agents in the "Prisoners' Dilemma" matrix game and periodically evaluate their performance. You will see regular evaluation results and once training terminates, you will see a plot of the learned Q-values for each agent!
 
 
-## Multi-Agent Deep Reinforcement Learning via the MARL Textbook Codebase
+## Wednesday: Actor-Critic Algorithms in Level-Based Foraging
 
-To accompany the MARL textbook, we have designed a [codebase](https://github.com/marl-book/codebase) that implements basic and easy-to-understand deep MARL ideas. The algorithms are self-contained and the implementations are focusing on simplicity.
+In the following exercises, we will make use of the textbook codebase. This [codebase](https://github.com/marl-book/codebase) has been designed to accompany the MARL textbook and implements basic and easy-to-understand deep MARL ideas. The algorithms are self-contained and the implementations are focusing on simplicity.
+
+### Multi-Agent Deep Reinforcement Learning via the MARL Textbook Codebase
 
 > [!NOTE]  
 > Implementation tricks, while necessary for some algorithms to perform well, are sparse in this codebase as not to make the code very complicated. As a result, some performance has been sacrificed for simplicity.
@@ -67,13 +69,10 @@ python run.py +algorithm=ia2c env.name="lbforaging:Foraging-8x8-3p-2f-v3" env.ti
 
 You should see regular progress of training being printed to the console. For more details on the codebase, please refer to the `README.md` file within the `marl-book-codebase` directory.
 
-## Wednesday: Actor-Critic Algorithms in Level-Based Foraging
-
-In this exercise, we will train some agents in a level-based foraging task using the independent advantage actor-critic (IA2C) algorithm. The IA2C algorithm is a multi-agent extension of the advantage actor-critic (A2C) algorithm, where each agent learns its policy and value function independently. 
 
 ### Train Agents with Independent Advantage Actor-Critic (IA2C)
 
-Start a training run with the following command:
+First, we will look at the independent A2C (IA2C) algorithm that is a multi-agent extension of the advantage actor-critic (A2C) algorithm, where each agent learns its policy and value function independently. To start a training run in a level-based foraging task, we can use the following command:
 
 ```bash
 python run.py +algorithm=ia2c env.name="lbforaging:Foraging-8x8-3p-2f-v3" env.time_limit=50 algorithm.total_steps=1000000 algorithm.name=ia2c env.standardise_rewards=True algorithm.video_interval=200000 seed=0
