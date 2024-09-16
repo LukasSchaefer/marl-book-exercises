@@ -1,0 +1,54 @@
+seed: 4
+algorithm:
+  total_steps: 4000000
+  log_interval: 100000
+  save_interval: 200000
+  eval_interval: 100000
+  eval_episodes: 20
+  video_interval: 200000
+  video_frames: 500
+  _target_: dqn.train.main
+  name: qmix
+  model:
+    _target_: dqn.model.QMixNetwork
+    layers:
+    - 128
+    - 128
+    parameter_sharing: true
+    use_orthogonal_init: true
+    use_rnn: false
+    device: cpu
+    mixing:
+      embed_dim: 64
+      hypernet_layers: 2
+      hypernet_embed: 32
+  training_start: 2000
+  buffer_size: 10000
+  optimizer: Adam
+  lr: 0.0003
+  gamma: 0.99
+  batch_size: 32
+  double_q: true
+  grad_clip: 1.0
+  use_proper_termination: false
+  standardise_returns: false
+  eps_decay_style: linear
+  eps_decay_over: 0.1
+  eps_start: 1.0
+  eps_end: 0.05
+  eps_exp_decay_rate: 6.5
+  eps_evaluation: 0.05
+  target_update_interval_or_tau: 200
+env:
+  _target_: utils.envs.make_env
+  name: lbforaging:Foraging-8x8-2p-3f-v3
+  time_limit: 50
+  clear_info: false
+  observe_id: true
+  standardise_rewards: true
+  wrappers:
+  - CooperativeReward
+logger:
+  _target_: utils.loggers.FileSystemLogger
+  project_name: fastmarl
+hypergroup: hp_grp_2

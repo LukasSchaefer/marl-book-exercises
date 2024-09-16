@@ -1,0 +1,51 @@
+seed: 0
+algorithm:
+  total_steps: 2000000
+  log_interval: 50000
+  save_interval: 100000
+  eval_interval: 50000
+  eval_episodes: 100
+  video_interval: 100000
+  video_frames: 1000
+  _target_: dqn.train.main
+  name: idqn
+  model:
+    _target_: dqn.model.QNetwork
+    layers:
+    - 128
+    - 128
+    parameter_sharing: true
+    use_orthogonal_init: true
+    use_rnn: true
+    device: cpu
+  training_start: 2000
+  buffer_size: 10000
+  optimizer: Adam
+  lr: 0.0003
+  gamma: 0.99
+  batch_size: 32
+  double_q: true
+  grad_clip: 1.0
+  use_proper_termination: false
+  standardise_returns: false
+  standardise_rewards: true
+  eps_decay_style: linear
+  eps_decay_over: 0.1
+  eps_start: 1.0
+  eps_end: 0.05
+  eps_exp_decay_rate: 6.5
+  eps_evaluation: 0.05
+  target_update_interval_or_tau: 200
+env:
+  _target_: utils.envs.make_env
+  name: smaclite/2s3z-v0
+  time_limit: 150
+  clear_info: false
+  observe_id: false
+  wrappers:
+  - RecordEpisodeStatistics
+  use_cpp_rvo2: true
+logger:
+  _target_: utils.loggers.FileSystemLogger
+  project_name: fastmarl
+hypergroup: hp_grp_0

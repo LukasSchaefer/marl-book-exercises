@@ -1,0 +1,55 @@
+seed: 1
+algorithm:
+  total_steps: 20000000
+  log_interval: 500000
+  save_interval: 1000000
+  eval_interval: 500000
+  eval_episodes: 20
+  video_interval: 1000000
+  video_frames: 1000
+  _target_: ac.train.main
+  name: mappo
+  model:
+    _target_: ac.model.PPONetwork
+    actor:
+      layers:
+      - 128
+      - 128
+      parameter_sharing: true
+      use_orthogonal_init: true
+      use_rnn: true
+    critic:
+      centralised: true
+      layers:
+      - 128
+      - 128
+      parameter_sharing: true
+      use_orthogonal_init: true
+      use_rnn: true
+    device: cpu
+  optimizer: Adam
+  lr: 0.0003
+  grad_clip: false
+  n_steps: 5
+  gamma: 0.99
+  entropy_coef: 0.001
+  value_loss_coef: 0.5
+  use_proper_termination: false
+  standardise_returns: false
+  standardise_rewards: true
+  num_epochs: 4
+  ppo_clip: 0.2
+  target_update_interval_or_tau: 0.01
+env:
+  _target_: utils.envs.make_env
+  name: rware:rware-tiny-4ag-v2
+  time_limit: 500
+  clear_info: false
+  observe_id: false
+  wrappers:
+  - RecordEpisodeStatistics
+  parallel_envs: 10
+logger:
+  _target_: utils.loggers.FileSystemLogger
+  project_name: fastmarl
+hypergroup: hp_grp_3

@@ -1,0 +1,17 @@
+- +hypergroup=hp_grp_4
+- algorithm.total_steps=4000000
+- algorithm.save_interval=200000
+- algorithm.video_interval=200000
+- algorithm.video_frames=500
+- algorithm.log_interval=100000
+- algorithm.eval_interval=100000
+- algorithm.eval_episodes=20
+- algorithm.model.parameter_sharing=True
+- algorithm.model.use_rnn=False
+- algorithm.eps_decay_over=0.1
+- env.name=lbforaging\:Foraging-8x8-2p-3f-v3
+- env.time_limit=50
+- env.observe_id=True
+- +algorithm=vdn
+- algorithm.standardise_rewards=True
+- seed=4
