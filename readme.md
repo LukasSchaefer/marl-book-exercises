@@ -1,4 +1,12 @@
-# Exercises for Barcelona Summer School 2024 -- Multi-Agent Reinforcement Learning
+# Accompanying Exercises for Multi-Agent Reinforcement Learning: Foundations and Modern Approaches
+
+These exercises were designed for the [Barcelona Summer School 2024 on Multi-Agent Reinforcement Learning](https://iiia.csic.es/en-us/marl-course/) and are based on the textbook [Multi-Agent Reinforcement Learning: Foundations and Modern Approaches](https://marl-book.com). Videos of the summer school lectures are available online:
+- [Session 1](https://www.youtube.com/watch?v=QfYx5q0Q75M)
+- [Session 2](https://www.youtube.com/watch?v=uYKYb2iqcYY)
+- [Session 3](https://www.youtube.com/watch?v=P1M1wCOxxEk)
+- [Session 4](https://www.youtube.com/watch?v=wdJeN8-Upwg)
+
+These exercises cover the implementation of a simple tabular multi-agent reinforcement learning algorithm, training deep multi-agent reinforcement learning agents using the [book codebase](https://github.com/marl-book/codebase), and visualising learned policies and value functions. We note that these exercises are not meant to be comprehensive and do not cover large parts of the codebase, but rather encourage you to explore and engage with the codebase and some of the material of the textbook.
 
 > [!NOTE]  
 > For these exercises, we will install Python packages and execute them with Python 3. We recommend using a virtual environment to avoid conflicts with other Python installations, e.g. using `venv` or `conda`. All exercises were tested with Python 3.10.
